@@ -57,11 +57,11 @@ typedef struct
 int main(int argc, const char* argv[])
 {
     
-	//Using my vector-like structure below
+    //Using my vector-like structure below
    
     vector_like v;
     
-	std::cout << "My struct: " << std::endl << std::endl;
+    std::cout << "My struct: " << std::endl << std::endl;
 	
     //wall clock time
     auto t_start1 = std::chrono::high_resolution_clock::now();
@@ -70,31 +70,31 @@ int main(int argc, const char* argv[])
     v.addVal(30, 20);
     //display value, index, and size 
     std::cout << "Value: " << v.getVal(30) << std::endl;
-	std::cout << "Index: 30" << std::endl;
-	std::cout << "Size:  " << v.getSize() << std::endl;
+    std::cout << "Index: 30" << std::endl;
+    std::cout << "Size:  " << v.getSize() << std::endl;
     std::cout << std::endl;
     
     //put the value 40 in the index 100
     v.addVal(100, 40);
     //display value, index, and size
     std::cout << "Value: " << v.getVal(100) << std::endl;
-	std::cout << "Index: 100" << std::endl;
-	std::cout << "Size:  " << v.getSize() << std::endl;
+    std::cout << "Index: 100" << std::endl;
+    std::cout << "Size:  " << v.getSize() << std::endl;
     std::cout << std::endl;
     
     //put the value 812 in the index 60,000
     v.addVal(60000, 812);
     //display value, index, and size 
     std::cout << "Value: " << v.getVal(60000) << std::endl;
-	std::cout << "Index: 60,000" << std::endl;
-	std::cout << "Size:  " << v.getSize() << std::endl;
+    std::cout << "Index: 60,000" << std::endl;
+    std::cout << "Size:  " << v.getSize() << std::endl;
     std::cout << std::endl;
     
     //wall clock time
     auto t_end1 = std::chrono::high_resolution_clock::now();
     //get total time
     auto my_time = std::chrono::duration<double, std::milli>(t_end1 - t_start1).count();
-	//free memory 
+    //free memory 
     v._free();
     
     /////////////////////////////////////////////////////////////////
@@ -103,12 +103,12 @@ int main(int argc, const char* argv[])
     
     //vector with 100 ints each with value 0
     std::vector<int> vec(100, 0);
-	//iterator
+    //iterator
     std::vector<int>::iterator it;
     it = vec.begin();
 
-	std::cout << "##############\n" << std::endl;
-	std::cout << "std::vector: " << std::endl << std::endl;
+    std::cout << "##############\n" << std::endl;
+    std::cout << "std::vector: " << std::endl << std::endl;
     //wall clock time
     auto t_start2 = std::chrono::high_resolution_clock::now();
     
@@ -116,8 +116,8 @@ int main(int argc, const char* argv[])
     vec.insert(it + 30, 20);
     //display value, index, and size 
     std::cout << "Value: " << vec.at(30) << std::endl;
-	std::cout << "Index: 30" << std::endl;
-	std::cout << "Size:  " << vec.size() << std::endl;
+    std::cout << "Index: 30" << std::endl;
+    std::cout << "Size:  " << vec.size() << std::endl;
     std::cout << std::endl;
 
     //recreate iterator
@@ -126,8 +126,8 @@ int main(int argc, const char* argv[])
     vec.insert(it + 100, 40);
     //display value, index, and size 
     std::cout << "Value: " << vec.at(100) << std::endl;
-	std::cout << "Index: 100" << std::endl;
-	std::cout << "Size:  " << vec.size() << std::endl;
+    std::cout << "Index: 100" << std::endl;
+    std::cout << "Size:  " << vec.size() << std::endl;
     std::cout << std::endl;
     
     //resize so vector has enough room
@@ -138,8 +138,8 @@ int main(int argc, const char* argv[])
     vec.insert(it + 60000, 812);
     //display value, index, and size 
     std::cout << "Value: " << vec.at(60000) << std::endl;
-	std::cout << "Index: 60,000" << std::endl;
-	std::cout << "Size:  " << vec.size() << std::endl;
+    std::cout << "Index: 60,000" << std::endl;
+    std::cout << "Size:  " << vec.size() << std::endl;
     std::cout << std::endl;
     
     //Inserting will increase the size of the vector by 1 which is why the vector has sizes
@@ -150,7 +150,7 @@ int main(int argc, const char* argv[])
     //get total time
     auto vec_time = std::chrono::duration<double, std::milli>(t_end2 - t_start2).count();
 
-	std::cout << "##############\n" << std::endl;
+    std::cout << "##############\n" << std::endl;
     std::cout << "My time: " << my_time << " ms" << std::endl;
     std::cout << "std::vector time: " << vec_time << " ms" << std::endl;
     
