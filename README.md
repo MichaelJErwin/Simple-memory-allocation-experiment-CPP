@@ -22,7 +22,8 @@ Example: Size 100 has indices 0-99, so when I try to insert into index 100, the 
 is resized to a size of 101.
 
 Inserting into a std::vector:   
-Insertion will increase the size of the vector by 1 which is why after the insertions 
-the std::vector has sizes 101, 102, and then 60,001, respectively. Before the third 
-insertion, I need to manually resize the std::vector to a size of 60,000 before I can 
-insert into it or else there is a segmentation fault. 
+Insertion will increase the size of the vector by 1, which is why after the first two 
+insertions the vector has sizes 101 and 102, respectively. Before the third insertion, 
+I need to manually resize the vector to a size of 60,000 before I can insert into it or 
+else there is a segmentation fault. Hence, after the third insertion, the vector has a 
+size of 60,001.
