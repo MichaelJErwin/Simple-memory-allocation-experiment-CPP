@@ -16,12 +16,12 @@ For both structures, I will insert:
 Both structures start out with the capacity to hold 100 items. The program displays 
 the value, index, and size of the structure after each insertion. 
 
-Inserting into my structure:
+Inserting into my structure:   
 If there is not enough capacity, increase size to desired insertion index + 1. 
 Example: Size 100 has indices 0-99, so when I try to insert into index 100, the struct 
 is resized to a size of 101.
 
-Inserting into a std::vector:
+Inserting into a std::vector:   
 Insertion will increase the size of the vector by 1 which is why after the insertions 
 the std::vector has sizes 101, 102, and then 60,001, respectively. Before the third 
 insertion, I need to manually resize the std::vector to a size of 60,000 before I can 
