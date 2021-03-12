@@ -21,17 +21,17 @@ typedef struct
     	//arr needs to be reallocated
     	if(position >= size)
     	{
-    		//position + 1 so that the size is right
-    		arr = (int *) realloc(arr, (position + 1) * sizeof(int));
-    		//insert value into newly allocated array
-    		arr[position] = value;
-    		//update size value
-    		size = position + 1;
+    	    //position + 1 so that the size is right
+    	    arr = (int *) realloc(arr, (position + 1) * sizeof(int));
+    	    //insert value into newly allocated array
+    	    arr[position] = value;
+    	    //update size value
+    	    size = position + 1;
     	}
     	//else put value into position
     	else
     	{
-    		arr[position] = value;
+    	    arr[position] = value;
     	}
     }
     //return value at index
